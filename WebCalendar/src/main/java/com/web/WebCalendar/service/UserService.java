@@ -1,4 +1,15 @@
 package com.web.WebCalendar.service;
 
-public class UserService {
+import com.web.WebCalendar.model.User;
+import com.web.WebCalendar.util.UserRepository;
+import org.springframework.stereotype.Component;
+
+import java.util.List;
+@Component
+public interface UserService {
+    void create(User user);
+    List<User> getAllUser();
+    User getUser(Long id);
+    boolean update(User user, Long id);
+    boolean delete(Long id);
 }
