@@ -4,6 +4,7 @@ import com.web.WebCalendar.model.User;
 import com.web.WebCalendar.service.UserService;
 import com.web.WebCalendar.util.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -24,6 +25,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public User getUser(Long id) {
         return userRepositiry.getReferenceById(id);
+    }
+
+    @Override
+    public User getUserByLogin(String login) {
+        return userRepositiry.findByLogin(login);
     }
 
     @Override

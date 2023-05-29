@@ -19,7 +19,7 @@
         <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
             <h1>Создать нового пользователя</h1>
             <div class="card-body">
-                <form th:action="@{WebCalendar/Enter}" th:object="${user}" method="post">
+                <form th:action="@{/WebCalendar/Registration}" th:object="${user}" method="post">
                     <div class="form-group">
                     <label>Логин</label>
                         <input type="text"

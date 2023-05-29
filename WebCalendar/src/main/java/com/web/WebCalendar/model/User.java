@@ -18,11 +18,11 @@ public class User {
     @Column(name = "login")
     private String login;
     @Column(name = "password")
-    private Integer password;
+    private String password;
     @Column(name = "name")
     private String name;
 
-    public User(Long id, String login, Integer password, String name) {
+    public User(Long id, String login, String password, String name) {
         this.id = id;
         this.login = login;
         this.password = password;
@@ -47,11 +47,11 @@ public class User {
         this.login = login;
     }
 
-    public Integer getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(Integer password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 
