@@ -5,10 +5,11 @@ import jakarta.persistence.*;
 
 
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+//@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class User {
     @Id
     @Column(name = "id")
@@ -21,6 +22,14 @@ public class User {
     private String password;
     @Column(name = "name")
     private String name;
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinTable(
+        name = "users_notes",
+        joinColumns = @JoinColumn(name = "users_id",  nullable = false, referencedColumnName = "id"),
+        inverseJoinColumns = @JoinColumn(name = "notes_id",  nullable = false, referencedColumnName = "id")
+
+)
+private Set<Note> notes;
 
     public User(Long id, String login, String password, String name) {
         this.id = id;
@@ -29,6 +38,13 @@ public class User {
         this.name = name;
     }
     public User() {
+    }
+    public Set<Note> getNotes() {
+        return notes;
+    }
+
+    public void setNotes(Set<Note> notes) {
+        this.notes = notes;
     }
 
     public Long getId() {

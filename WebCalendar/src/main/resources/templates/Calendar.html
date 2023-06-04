@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #01796f
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="col-lg-3">
+        <table class="table">
+            <thead>
+            <tr>
+            <th scope="col">Пн</th>
+            <th scope="col">Вт</th>
+            <th scope="col">Ср</th>
+            <th scope="col">Чт</th>
+            <th scope="col">Пт</th>
+            <th scope="col">Сб</th>
+            <th scope="col">Вс</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td  th:text="${calendar.getMonths().get(0) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(0))} : ' ' ">day</td>
+                <td  th:text="${calendar.getMonths().get(1) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(1))} : ' ' ">day</td>
+                <td  th:text="${calendar.getMonths().get(2) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(2))} : ' ' ">day</td>
+                <td  th:text="${calendar.getMonths().get(3) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(3))} : ' ' ">day</td>
+                <td  th:text="${calendar.getMonths().get(4) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(4))} : ' ' ">day</td>
+                <td  th:text="${calendar.getMonths().get(5) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(5))} : ' ' ">day</td>
+                <td  th:text="${calendar.getMonths().get(6) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(6))} : ' ' ">day</td>
+            </tr>
+                <tr>
+                    <td  th:text="${calendar.getMonths().get(7) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(7))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(8) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(8))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(9) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(9))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(10) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(10))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(11) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(11))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(12) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(12))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(13) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(13))} : ' ' ">day</td>
+                </tr>
+                <tr>
+                    <td  th:text="${calendar.getMonths().get(14) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(14))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(15) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(15))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(16) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(16))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(17) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(17))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(18) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(18))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(19) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(19))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(20) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(20))} : ' ' ">day</td>
+                </tr>
+                <tr>
+                    <td  th:text="${calendar.getMonths().get(21) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(21))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(22) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(22))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(23) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(23))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(24) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(24))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(25) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(25))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(26) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(26))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(27) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(27))} : ' ' ">day</td>
+                </tr>
+                <tr>
+                    <td  th:text="${calendar.getMonths().get(28) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(28))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(29) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(29))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(30) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(30))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(31)!= null } ? ${calendar.getDayOfData(calendar.getMonths().get(31))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(32) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(32))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(33) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(33))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(34) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(34))} : ' ' ">day</td>
+                </tr>
+                <tr>
+                    <td  th:text="${calendar.getMonths().get(35) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(35))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(36) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(36))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(37) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(37))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(38) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(38))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(39) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(39))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(40) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(40))} : ' ' ">day</td>
+                    <td  th:text="${calendar.getMonths().get(41) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(41))} : ' ' ">day</td>
+                </tr>
+<!--            </th:block>-->
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

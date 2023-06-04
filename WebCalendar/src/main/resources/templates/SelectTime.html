@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Выбор календаря</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: #01796f
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+  <div class="col-md-4 mt-5">
+    <form th:action="@{/WebCalendar/Selection}" th:object="${calendarUnit}" method="post">
+    <div class="form-group">
+      <label for="years">Выберите год</label>
+      <select class="form-control selectpicker" th:field="*{years}" id="years" >
+        <option th:each="year : ${T(com.web.WebCalendar.util.Years).values()}" th:value="${year.getYear()}" th:text="${year.getYear()}">year</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="months">Выберите месяц</label>
+      <select class="form-control selectpicker" th:field="*{months}" id="months">
+        <option th:each="months : ${T(com.web.WebCalendar.util.Months).values()}" th:value="${months.getNum()}" th:text="${months.getRusName()}">month</option>
+      </select>
+    </div>
+      <button class="btn btn-primary" type="submit">Принять</button>
+    </form>
+  </div>
+  </div>
+</div>
+</body>
+</html>
