@@ -9,5 +9,6 @@ CREATE TABLE IF NOT EXISTS notes(
     id BIGSERIAL PRIMARY KEY,
     date TIMESTAMP NOT NULL,
     note TEXT NOT NULL,
-    user_id BIGINT NOT NULL
+    user_id BIGINT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id)
 );
