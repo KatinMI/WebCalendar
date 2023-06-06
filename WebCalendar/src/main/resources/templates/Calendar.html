@@ -16,73 +16,87 @@
         <table class="table">
             <thead>
             <tr>
-            <th scope="col">Пн</th>
-            <th scope="col">Вт</th>
-            <th scope="col">Ср</th>
-            <th scope="col">Чт</th>
-            <th scope="col">Пт</th>
-            <th scope="col">Сб</th>
-            <th scope="col">Вс</th>
+                <th scope="col">Пн</th>
+                <th scope="col">Вт</th>
+                <th scope="col">Ср</th>
+                <th scope="col">Чт</th>
+                <th scope="col">Пт</th>
+                <th scope="col">Сб</th>
+                <th scope="col">Вс</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <td  th:text="${calendar.getMonths().get(0) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(0))} : ' ' ">day</td>
-                <td  th:text="${calendar.getMonths().get(1) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(1))} : ' ' ">day</td>
-                <td  th:text="${calendar.getMonths().get(2) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(2))} : ' ' ">day</td>
-                <td  th:text="${calendar.getMonths().get(3) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(3))} : ' ' ">day</td>
-                <td  th:text="${calendar.getMonths().get(4) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(4))} : ' ' ">day</td>
-                <td  th:text="${calendar.getMonths().get(5) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(5))} : ' ' ">day</td>
-                <td  th:text="${calendar.getMonths().get(6) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(6))} : ' ' ">day</td>
+                <td> <p class="btn btn-danger"  th:text="${calendar.getMonths().get(0) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(0))} : ' _'">day </p></td>
+                <td> <p class="btn btn-danger"      th:text="${calendar.getMonths().get(1) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(1))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"      th:text="${calendar.getMonths().get(2) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(2))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"      th:text="${calendar.getMonths().get(3) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(3))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"      th:text="${calendar.getMonths().get(4) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(4))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"      th:text="${calendar.getMonths().get(5) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(5))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"      th:text="${calendar.getMonths().get(6) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(6))} : ' _' ">day </p></td>
             </tr>
-                <tr>
-                    <td  th:text="${calendar.getMonths().get(7) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(7))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(8) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(8))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(9) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(9))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(10) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(10))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(11) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(11))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(12) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(12))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(13) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(13))} : ' ' ">day</td>
-                </tr>
-                <tr>
-                    <td  th:text="${calendar.getMonths().get(14) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(14))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(15) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(15))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(16) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(16))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(17) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(17))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(18) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(18))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(19) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(19))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(20) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(20))} : ' ' ">day</td>
-                </tr>
-                <tr>
-                    <td  th:text="${calendar.getMonths().get(21) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(21))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(22) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(22))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(23) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(23))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(24) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(24))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(25) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(25))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(26) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(26))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(27) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(27))} : ' ' ">day</td>
-                </tr>
-                <tr>
-                    <td  th:text="${calendar.getMonths().get(28) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(28))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(29) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(29))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(30) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(30))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(31)!= null } ? ${calendar.getDayOfData(calendar.getMonths().get(31))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(32) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(32))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(33) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(33))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(34) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(34))} : ' ' ">day</td>
-                </tr>
-                <tr>
-                    <td  th:text="${calendar.getMonths().get(35) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(35))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(36) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(36))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(37) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(37))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(38) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(38))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(39) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(39))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(40) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(40))} : ' ' ">day</td>
-                    <td  th:text="${calendar.getMonths().get(41) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(41))} : ' ' ">day</td>
-                </tr>
-<!--            </th:block>-->
+            <tr>
+                <td> <p class="btn btn-danger"     th:text="${calendar.getMonths().get(7) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(7))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"     th:text="${calendar.getMonths().get(8) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(8))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"     th:text="${calendar.getMonths().get(9) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(9))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"     th:text="${calendar.getMonths().get(10) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(10))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"     th:text="${calendar.getMonths().get(11) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(11))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"     th:text="${calendar.getMonths().get(12) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(12))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"     th:text="${calendar.getMonths().get(13) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(13))} : ' _' ">day </p></td>
+            </tr>
+            <tr>
+                <td> <p class="btn btn-danger"     th:text="${calendar.getMonths().get(14) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(14))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"     th:text="${calendar.getMonths().get(15) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(15))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"     th:text="${calendar.getMonths().get(16) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(16))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"     th:text="${calendar.getMonths().get(17) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(17))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"     th:text="${calendar.getMonths().get(18) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(18))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"     th:text="${calendar.getMonths().get(19) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(19))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"     th:text="${calendar.getMonths().get(20) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(20))} : ' _' ">day </p></td>
+            </tr>
+            <tr>
+                <td> <p class="btn btn-danger"     th:text="${calendar.getMonths().get(21) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(21))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"     th:text="${calendar.getMonths().get(22) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(22))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"     th:text="${calendar.getMonths().get(23) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(23))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"     th:text="${calendar.getMonths().get(24) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(24))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"     th:text="${calendar.getMonths().get(25) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(25))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"     th:text="${calendar.getMonths().get(26) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(26))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"     th:text="${calendar.getMonths().get(27) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(27))} : ' _' ">day </p></td>
+            </tr>
+            <tr>
+                <td> <p class="btn btn-danger"     th:text="${calendar.getMonths().get(28) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(28))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"     th:text="${calendar.getMonths().get(29) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(29))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"     th:text="${calendar.getMonths().get(30) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(30))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"     th:text="${calendar.getMonths().get(31)!= null } ? ${calendar.getDayOfData(calendar.getMonths().get(31))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"     th:text="${calendar.getMonths().get(32) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(32))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"     th:text="${calendar.getMonths().get(33) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(33))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"     th:text="${calendar.getMonths().get(34) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(34))} : ' _' ">day </p></td>
+            </tr>
+            <tr>
+                <td> <p class="btn btn-danger"   th:text="${calendar.getMonths().get(35) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(35))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"   th:text="${calendar.getMonths().get(36) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(36))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"   th:text="${calendar.getMonths().get(37) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(37))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"    th:text="${calendar.getMonths().get(38) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(38))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"   th:text="${calendar.getMonths().get(39) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(39))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"   th:text="${calendar.getMonths().get(40) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(40))} : ' _' ">day </p></td>
+                <td> <p class="btn btn-danger"   th:text="${calendar.getMonths().get(41) != null } ? ${calendar.getDayOfData(calendar.getMonths().get(41))} : ' _' ">day </p></td>
+            </tr>
             </tbody>
         </table>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 mt-5">
+            <form th:action="@{/WebCalendar/Month}" th:object="${calendar}" method="post">
+                <div class="form-group">
+                    <label for="note">Выберите день для показа развёрнутого расписания</label>
+                    <select class="form-control selectpicker" th:field="*{time}" id="note" >
+                        <option th:each=" day : ${calendar.getMonthsWithoutNull()}" th:value="${T(java.lang.Long).toString(day.getTime())}" th:text="${calendar.getDayOfData(day)}">year</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" type="submit">Принять</button>
+            </form>
+        </div>
     </div>
 </div>
 </body>

@@ -10,7 +10,7 @@ public interface NoteService {
     void create(Note note);
     List<Note> getAllNote();
     Note getNote(Long id);
-    Note getNoteByDate(Date date);
+    List<Note> getNoteByDate(Date date);
     boolean update(Note note, Long id);
     boolean delete(Long id);
 }

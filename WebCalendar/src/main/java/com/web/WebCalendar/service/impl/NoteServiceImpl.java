@@ -28,7 +28,7 @@ public class NoteServiceImpl implements NoteService {
     }
 
     @Override
-    public Note getNoteByDate(Date date) {
+    public List<Note> getNoteByDate(Date date) {
         return noteRepository.findByDate(date);
     }
 

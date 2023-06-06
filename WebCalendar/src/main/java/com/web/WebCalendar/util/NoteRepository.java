@@ -4,7 +4,8 @@ import com.web.WebCalendar.model.Note;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Date;
+import java.util.List;
 
 public interface NoteRepository extends JpaRepository<Note,Long> {
-    Note findByDate(Date date);
+    List<Note> findByDate(Date date);
 }

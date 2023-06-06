@@ -18,26 +18,20 @@ public class Note {
    @Column(name = "date")
    private Date date;
    @Column(name = "note")
-   private String note;
-@ManyToMany(mappedBy = "notes")
-   private Set<User> users;
+   private String text;
+   @Column(name = "user_id")
+   private Long userId;
 
-   public Note(Long id, Date date, String note) {
+   public Note(Long id, Date date, String text) {
       this.id = id;
       this.date = date;
-      this.note = note;
+      this.text = text;
    }
 
    public Note() {
    }
 
-   public Set<User> getUsers() {
-      return users;
-   }
 
-   public void setUsers(Set<User> users) {
-      this.users = users;
-   }
 
    public Long getId() {
       return id;
@@ -55,12 +49,20 @@ public class Note {
       this.date = date;
    }
 
-   public String getNote() {
-      return note;
+   public String getText() {
+      return text;
    }
 
-   public void setNote(String note) {
-      this.note = note;
+   public void setText(String text) {
+      this.text = text;
+   }
+
+   public Long getUserId() {
+      return userId;
+   }
+
+   public void setUserId(Long userId) {
+      this.userId = userId;
    }
 
    @Override
@@ -68,12 +70,12 @@ public class Note {
       if (this == o) return true;
       if (o == null || getClass() != o.getClass()) return false;
       Note note1 = (Note) o;
-      return Objects.equals(id, note1.id) && Objects.equals(date, note1.date) && Objects.equals(note, note1.note);
+      return Objects.equals(id, note1.id) && Objects.equals(date, note1.date) && Objects.equals(text, note1.text);
    }
 
    @Override
    public int hashCode() {
-      return Objects.hash(id, date, note);
+      return Objects.hash(id, date, text);
    }
 
    @Override
@@ -81,7 +83,7 @@ public class Note {
       return "Note{" +
               "id=" + id +
               ", date=" + date +
-              ", note='" + note + '\'' +
+              ", text='" + text + '\'' +
               '}';
    }
 }

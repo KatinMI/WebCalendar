@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Расписание на день</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: #01796f
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+      <h1 class="d-flex justify-content-center">Дела на день</h1>
+      <div class="col-lg-3 col-md-3 col-sm-3">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">День</th>
+                <th scope="col">Месяц</th>
+                <th scope="col">Год</th>
+                <th scope="col">Заметки</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="note : ${notes}">
+                <td th:text="${calendar.getDayOfData(note.getDate())}">day</td>
+                <td th:text="${calendar.getMonthOfData(note.getDate())}">month</td>
+                <td th:text="${calendar.getYearOfData(note.getDate())}">year</td>
+                <td th:text="${note.text}">your note</td>
+            </tr>
+            </tbody>
+        </table>
+      </div>
+  </div>
+    <div class="col-lg-3">
+        <a th:href="@{/WebCalendar/Day/new}" class="btn-danger">Добавить заметку</a>
+    </div>
+</div>
+</body>
+</html>

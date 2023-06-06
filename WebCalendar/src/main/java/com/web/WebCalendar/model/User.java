@@ -22,14 +22,7 @@ public class User {
     private String password;
     @Column(name = "name")
     private String name;
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinTable(
-        name = "users_notes",
-        joinColumns = @JoinColumn(name = "users_id",  nullable = false, referencedColumnName = "id"),
-        inverseJoinColumns = @JoinColumn(name = "notes_id",  nullable = false, referencedColumnName = "id")
 
-)
-private Set<Note> notes;
 
     public User(Long id, String login, String password, String name) {
         this.id = id;
@@ -38,13 +31,6 @@ private Set<Note> notes;
         this.name = name;
     }
     public User() {
-    }
-    public Set<Note> getNotes() {
-        return notes;
-    }
-
-    public void setNotes(Set<Note> notes) {
-        this.notes = notes;
     }
 
     public Long getId() {
